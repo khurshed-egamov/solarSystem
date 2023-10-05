@@ -34,10 +34,11 @@ const saturn = new THREE.Mesh(new THREE.SphereGeometry(116,32,32),new THREE.Mesh
 const uranus = new THREE.Mesh(new THREE.SphereGeometry(50,32,32),new THREE.MeshBasicMaterial({map:uranusT}));
 const venus = new THREE.Mesh(new THREE.SphereGeometry(12.1,32,32),new THREE.MeshBasicMaterial({map:venusT}));
 const pluto = new THREE.Mesh(new THREE.SphereGeometry(2.3,32,32),new THREE.MeshBasicMaterial({map:plutoT}));
+const light = new THREE.AmbientLight({color:0xfffff})
 sun.position.x = 0;
 mercury.position.x = 0;
 mercury.position.y = 0;
-
+scene.add(light)
 scene.add(sun);
 scene.add(mercury);
 scene.add(venus);
